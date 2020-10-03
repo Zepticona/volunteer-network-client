@@ -1,0 +1,43 @@
+body {
+    background: #F9FAFC;
+}
+.wrappingContainer {
+    padding-top: 100px;
+    text-align: center;
+}
+.siteLogo {
+    width: 300px;
+}
+.loginBox {
+    width: 450px;
+    height: 570px;
+    margin: 20px auto;
+    padding: 10px 50px;
+    /* border: 1px solid black; */
+    background: white;
+    box-shadow: 0 0 1px 0px grey;
+    text-align: left;
+}
+.loginBox h4 {
+    margin-top: 30px;
+}
+.loginBox input {
+    display: block;
+    width: 100%;
+    margin: 40px 0px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.loginBox input:focus {
+    outline: 0;
+}
+.loginBox button {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background: #3F90FC;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}

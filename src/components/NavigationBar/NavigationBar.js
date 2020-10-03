@@ -14,13 +14,13 @@ const NavigationBar = () => {
                 <Nav className="ml-auto">
                     {/* <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#link">Link</Nav.Link>        */}
-                    <Link>Home</Link>
+                    <Link to="/home">Home</Link>
                     <Link style={{marginLeft: '30px'}}>Donation</Link>
                     <Link style={{marginLeft: '30px'}}>Events</Link>
                     <Link style={{marginLeft: '30px'}}>Blog</Link>
                 </Nav>
                 <Form inline>
-                    <Link>
+                    <Link to="/login">
                         <Button style={{marginLeft: '30px'}} variant="primary">Register</Button>
                     </Link>
                     <Link>

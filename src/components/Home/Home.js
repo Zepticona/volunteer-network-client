@@ -7,7 +7,7 @@ import classes from './home.module.css'
 const Home = () => {
     return (
         <Container className={classes.wrappingContainer}>
-            <img className={classes.background} src={require('../../assets/logos/bacgkround.jpg')} alt=""/>
+            <img className={classes.background} src={'https://i.imgur.com/THtpcgX.jpg'} alt=""/>
             <NavigationBar></NavigationBar>
             <SearchBar></SearchBar>
             <AllWorks></AllWorks>
@@ -18,3 +18,6 @@ const Home = () => {
 };
 
 export default Home;
+ // {require('../../assets/logos/bacgkround.jpg')}
+
+// <a href="https://imgur.com/THtpcgX"><img src="https://i.imgur.com/THtpcgX.jpg" title="source: imgur.com" /></a>

@@ -6,10 +6,10 @@ const SingleWork = (props) => {
         <Link to={`/registration/${props.volunteeringWork.id}`}>
             <div className={classes.wrappingContainer}>
                 <div className={classes.cardImage}>
-                    <img src={require('../../assets/images/babySit.png')} alt=""/>
+                    <img src={`${props.volunteeringWork.img}`} alt=""/>
                 </div>
-                <div className={classes.cardContent}>
-                <p>{props.volunteeringWork.name}</p>
+                <div className={classes.cardContent} style={{backgroundColor: `${props.volunteeringWork.bgColor}`}}>
+                    <p>{props.volunteeringWork.name}</p>
                 </div>
             </div>
         </Link>

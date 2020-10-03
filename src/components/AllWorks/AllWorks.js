@@ -4,7 +4,6 @@ import volunteeringWorks from '../../FakeData/fakeData';
 import SingleWork from '../SingleWork/SingleWork';
 
 const AllWorks = () => {
-
     const [works, setWorks] = useState([]);
     useEffect( () => {
         const data = [...volunteeringWorks]
