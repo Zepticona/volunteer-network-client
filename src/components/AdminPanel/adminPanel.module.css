@@ -1,0 +1,12 @@
+.wrappingContainer {
+    display: flex;
+    padding: 15px;
+    height: 100vh;
+}
+.adminNavigationPanel {
+    width: 26%;
+}
+.adminInfoPanel {
+    width: 100%;
+
+}

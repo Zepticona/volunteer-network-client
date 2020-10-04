@@ -5,10 +5,11 @@ import NavigationBar from '../NavigationBar/NavigationBar';
 import SearchBar from '../SearchBar/SearchBar';
 import classes from './home.module.css'
 const Home = () => {
+    
     return (
         <Container className={classes.wrappingContainer}>
             <img className={classes.background} src={'https://i.imgur.com/THtpcgX.jpg'} alt=""/>
-            <NavigationBar></NavigationBar>
+            <NavigationBar showEmail={true}></NavigationBar>
             <SearchBar></SearchBar>
             <AllWorks></AllWorks>
         </Container>
@@ -18,6 +19,3 @@ const Home = () => {
 };
 
 export default Home;
- // {require('../../assets/logos/bacgkround.jpg')}
-
-// <a href="https://imgur.com/THtpcgX"><img src="https://i.imgur.com/THtpcgX.jpg" title="source: imgur.com" /></a>

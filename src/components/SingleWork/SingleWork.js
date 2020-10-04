@@ -13,7 +13,6 @@ const SingleWork = (props) => {
                 </div>
             </div>
         </Link>
-        
     );
 };
 
