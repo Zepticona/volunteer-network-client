@@ -1,9 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config'
 import { UserContext } from '../../App';
-import NavigationBar from '../NavigationBar/NavigationBar';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import classes from './login.module.css'
 
@@ -40,6 +39,7 @@ const Login = () => {
             // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
             // ...
+            console.log(errorCode, errorMessage, email, credential)
         });
     }
     
@@ -54,7 +54,7 @@ const Login = () => {
                     <img src={require('../../assets/logos/google.png')} alt=""/>
                     <span>Continue with google</span>
                 </button>
-                <p>Don't have an account? <a href="#">Crate an account</a> </p>
+                <p>Don't have an account? <a href="https://accounts.google.com/signup?hl=en" target="_blank">Crate an account</a> </p>
             </div>
         </div>
     );

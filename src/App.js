@@ -4,13 +4,11 @@ BrowserRouter as Router, Route, Switch
 } from 'react-router-dom';
 import AdminPanel from './components/AdminPanel/AdminPanel';
 import AllRegisteredWorks from './components/AllRegisteredWorks/AllRegisteredWorks';
-import AllWorks from './components/AllWorks/AllWorks';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PrivateRoute2 from './components/PrivateRoute2/PrivateRoute2';
-import RegisteredWorks from './components/RegisteredWorks/RegisteredWorks';
 import Registration from './components/Registration/Registration';
 
 export const UserContext = createContext()

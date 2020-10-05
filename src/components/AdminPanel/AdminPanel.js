@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import AdminInfos from '../AdminInfos/AdminInfos';
 import AdminNavPanel from '../AdminNavPanel/AdminNavPanel';
-import NavigationBar from '../NavigationBar/NavigationBar';
 import classes from './adminPanel.module.css'
 
 const AdminPanel = () => {

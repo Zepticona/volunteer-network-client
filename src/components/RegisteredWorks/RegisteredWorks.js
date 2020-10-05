@@ -1,7 +1,4 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { UserContext } from '../../App';
-import NavigationBar from '../NavigationBar/NavigationBar';
+import React from 'react';
 import classes from './registeredWorks.module.css'
 const RegisteredWorks = (props) => {
 

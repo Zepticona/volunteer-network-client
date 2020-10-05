@@ -1,13 +1,14 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import classes from './singleUser.module.css'
 
 const SingleUser = (props) => {
-    const rowStyle = {
-        fontWeight: 600,
-        padding: '5px',
-        marginTop: '10px',
-        marginBottom: '10px'
-    }
+    // const rowStyle = {
+    //     fontWeight: 600,
+    //     padding: '5px',
+    //     marginTop: '10px',
+    //     marginBottom: '10px'
+    // }
     
     // Handling click on the cancel button 
     const deleteWorkHandler = (e, id) => {
@@ -28,13 +29,13 @@ const SingleUser = (props) => {
 
     console.log(props)
     return (
-        <Row style={rowStyle}>
+        <Row className={classes.rowStyle}>
             <Col md={2}>{props.userInfo.fullName}</Col>
             <Col md={4}>{props.userInfo.email}</Col>
             <Col md={2}>{props.userInfo.date}</Col>
             <Col md={3}>{props.userInfo.volunteerWork}</Col>
             <Col md={1}>
-                <span onClick={(e) => deleteWorkHandler(e, `${props.userInfo._id}`)}>delete</span>
+                <span onClick={(e) => deleteWorkHandler(e, `${props.userInfo._id}`)} className={classes.deleteBtn}>DELETE</span>
             </Col>
         </Row>
     );

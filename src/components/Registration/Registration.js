@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
-import NavigationBar from '../NavigationBar/NavigationBar';
 import classes from './registration.module.css'
 
 const Registration = () => {
@@ -48,10 +47,10 @@ const Registration = () => {
             <div className={classes.loginBox} >
                 <h4>Register as a Volunteer</h4>
                 <input type="text" placeholder="Full Name" id="name" value={loggedInUser.name} />
-                <input type="text" placeholder="Username or Email" id="email" value={loggedInUser.email} />
+                <input type="text" placeholder="Username or Email" id="email" readOnly value={loggedInUser.email} />
                 <input type="date" placeholder="Date" id="date" required/>
                 <input type="text" placeholder="Description" id="description" />
-                <input disabled type="text" id="volunteerWork" />
+                <input readOnly type="text" id="volunteerWork" />
                 <Link to="/testingRoute">
                     <button onClick={registrationHandler}>Registration</button>
                 </Link>

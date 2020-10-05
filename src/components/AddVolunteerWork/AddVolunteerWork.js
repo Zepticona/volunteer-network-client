@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import classes from './addVolunteerWork.module.css'
 const AddVolunteerWork = () => {
 
@@ -27,17 +28,6 @@ const AddVolunteerWork = () => {
                 date: document.getElementById('date').value,
                 img: 'https://i.imgur.com/81s47f5.jpg'
             }
-
-            console.log(newVolunteerWork)
-            // console.log(allWorks)
-
-            // const newData = [...allWorks, newVolunteerWork]
-
-            // console.log(newData)
-
-            // setAllWorks(newData)
-            // const updatedWorkSet = [...allWorks]
-            // console.log(updatedWorkSet)
             fetch('https://young-ocean-27000.herokuapp.com/addWork', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
@@ -47,38 +37,38 @@ const AddVolunteerWork = () => {
             .then( data => {
                 console.log('Data posted to database')
             })
+            alert('Added to the database. Please re visit the page to add a new work.')
             e.preventDefault()
     }
     return (
         <div>
             <h2 style={{marginBottom: '20px', marginTop: '25px'}}>Add Event</h2> 
-            <Form className={classes.formWrapper} onSubmit={handleFormSubmit}>
+            <Form style={style} onSubmit={handleFormSubmit}>
                 <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Group as={Col}>
                         <Form.Label>Event Title</Form.Label>
-                        <Form.Control type="text" placeholder="Event Title" id="title"/>
+                        <Form.Control type="text" placeholder="Event Title" id="title" required />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Group as={Col}>
                         <Form.Label>Event Date</Form.Label>
                         <Form.Control type="date" placeholder=""  id="date"/>
                     </Form.Group>
                 </Form.Row>
 
                 <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Group as={Col}>
                         <Form.Label>Description</Form.Label>
                         <Form.Control type="text" placeholder="Enter Description" id="description" />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Group as={Col}>
                         <Form.Label>Image</Form.Label>
                         <Form.Control type="text" placeholder="Enter Imgur Link" disabled/>
                     </Form.Group>
                 </Form.Row>
-                <Button style={{marginLeft: '88%'}} variant="primary" type="submit">
-                    Submit
-                </Button>
+                    <Button style={{marginLeft: '88%'}} variant="primary" type="submit">Submit</Button>
+                
             </Form>
         </div>
     );

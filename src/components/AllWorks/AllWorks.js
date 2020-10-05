@@ -16,7 +16,7 @@ const AllWorks = () => {
         <div>
             <Row>
                 {
-                    works.map( el => <Col xs={6} md={3}><SingleWork volunteeringWork={el}></SingleWork></Col>)
+                    works.map( (el, i) => <Col key={i} xs={6} md={3}><SingleWork volunteeringWork={el}></SingleWork></Col>)
                 }
             </Row>
         </div>
