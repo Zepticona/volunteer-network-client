@@ -13,12 +13,14 @@ const Login = () => {
     let { from } = location.state || { from: { pathname: "/" } };
 
     const [loggedInUser, setLoggedInuser] = useContext(UserContext);
+    
+    // Stopping firebase from creating an infinite loop by rerendering the dom
     if(firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
     }
     
-    const provider = new firebase.auth.GoogleAuthProvider();
-    
+    // Logging in google account
+    const provider = new firebase.auth.GoogleAuthProvider();    
     const googleLoginHandler = () => {
         firebase.auth().signInWithPopup(provider)
         .then(result => {
@@ -28,7 +30,6 @@ const Login = () => {
             }
             setLoggedInuser(userInfos);
             history.replace(from);
-            console.log('[Gmail signed in User info]', loggedInUser)
         })
         .catch( error => {
             // Handle Errors here.

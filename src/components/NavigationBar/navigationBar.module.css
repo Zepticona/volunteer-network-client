@@ -1,3 +1,10 @@
 .siteLogo {
     width: 200px;
 }
+.bootstrapNavbar a {
+    color: #1C1D1F;
+
+}
+.bootstrapNavbar a:hover {
+    text-decoration: none;
+}

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import classes from './addVolunteerWork.module.css'
 const AddVolunteerWork = () => {
 
     const style ={
@@ -11,6 +9,7 @@ const AddVolunteerWork = () => {
     
     const [allWorks, setAllWorks] = useState([]);
 
+    // Get the array of current volunteering events
     useEffect( () => {
         fetch('https://young-ocean-27000.herokuapp.com/allWorks')
         .then( res => res.json())
@@ -19,7 +18,11 @@ const AddVolunteerWork = () => {
             setAllWorks(allData);
         })
     }, [])
+
+
+    // Handle Submit button click
     const handleFormSubmit = (e) => {
+        // Make a new id for the new volunteering event
         const newItemId = allWorks[allWorks.length - 1 ].id + 1;
             const newVolunteerWork = {
                 id: newItemId,
@@ -28,6 +31,8 @@ const AddVolunteerWork = () => {
                 date: document.getElementById('date').value,
                 img: 'https://i.imgur.com/81s47f5.jpg'
             }
+
+            // Send the newly constructed event to the database
             fetch('https://young-ocean-27000.herokuapp.com/addWork', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
@@ -37,7 +42,11 @@ const AddVolunteerWork = () => {
             .then( data => {
                 console.log('Data posted to database')
             })
+
+            // Warn the user to not use the same data to create a post.
             alert('Added to the database. Please re visit the page to add a new work.')
+
+            // Prevent page reload after form submission
             e.preventDefault()
     }
     return (

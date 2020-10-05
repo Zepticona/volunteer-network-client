@@ -3,13 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import classes from './singleUser.module.css'
 
 const SingleUser = (props) => {
-    // const rowStyle = {
-    //     fontWeight: 600,
-    //     padding: '5px',
-    //     marginTop: '10px',
-    //     marginBottom: '10px'
-    // }
-    
+
     // Handling click on the cancel button 
     const deleteWorkHandler = (e, id) => {
         // Accessing the clicked button's wrapper DOM and storing it into a mutable variable
@@ -27,7 +21,6 @@ const SingleUser = (props) => {
         })
     }
 
-    console.log(props)
     return (
         <Row className={classes.rowStyle}>
             <Col md={2}>{props.userInfo.fullName}</Col>

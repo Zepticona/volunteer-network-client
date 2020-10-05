@@ -7,23 +7,27 @@ import classes from './navigationBar.module.css'
 const NavigationBar = (props) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
-        <Navbar className="bootstrap-navbar" expand="lg">
-            <Navbar.Brand href="/home">
-                <img className={classes.siteLogo} src={require('../../assets/logos/siteLogo.png')} alt=""/>
+        <Navbar className={classes.bootstrapNavbar} expand="lg">
+            <Navbar.Brand>
+                <Link to="/home">
+                    <img className={classes.siteLogo} src={require('../../assets/logos/siteLogo.png')} alt=""/>
+                </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    {/* <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>        */}
                     <Link to="/home">Home</Link>
                     <Link style={{marginLeft: '30px'}} to="/home">Donation</Link>
-                    <Link to="/testingRoute" style={{marginLeft: '30px'}}>Registered Works</Link>
+                    <Link to="/allRegisteredWorks" style={{marginLeft: '30px'}}>Events</Link>
                     <Link style={{marginLeft: '30px'}} to="/home">Blog</Link>
                 </Nav>
                 <Form inline>
                     {
-                        props.showEmail && loggedInUser.email ? <Link to="/home" style={{marginLeft: '30px'}}>{loggedInUser.email}</Link> : <Link to="/login"><Button style={{marginLeft: '30px'}} variant="primary">Register/Login</Button></Link>
+                        props.showEmail && loggedInUser.email
+                         ? 
+                        <Link to="/home" style={{marginLeft: '30px', fontWeight: 600}}>{loggedInUser.name}</Link> 
+                        : 
+                        <Link to="/login"><Button style={{marginLeft: '30px'}} variant="primary">Register/Login</Button></Link>
                     }
                     <Link to="/adminPanel/allRegisteredUsers"><Button style={{marginLeft: '30px'}} variant="secondary">Admin</Button></Link>
                 </Form>

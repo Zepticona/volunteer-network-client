@@ -36,8 +36,7 @@ const Registration = () => {
             body: JSON.stringify(userInfo)
         })
         .then( res => res.json())
-        .then( data => console.log(data))
-        console.log(userInfo)
+        .then( data => console.log('Users Data Sent to the database.'))
     }
     return (
             <div className={classes.wrappingContainer}>
@@ -51,7 +50,7 @@ const Registration = () => {
                 <input type="date" placeholder="Date" id="date" required/>
                 <input type="text" placeholder="Description" id="description" />
                 <input readOnly type="text" id="volunteerWork" />
-                <Link to="/testingRoute">
+                <Link to="/allRegisteredWorks">
                     <button onClick={registrationHandler}>Registration</button>
                 </Link>
             </div >
