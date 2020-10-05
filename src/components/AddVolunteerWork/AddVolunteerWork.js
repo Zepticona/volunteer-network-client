@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
-
+import classes from './addVolunteerWork.module.css'
 const AddVolunteerWork = () => {
+
+    const style ={
+        padding: '30px',
+        backgroundColor: 'white'
+    }
     
     const [allWorks, setAllWorks] = useState([]);
 
@@ -47,7 +52,7 @@ const AddVolunteerWork = () => {
     return (
         <div>
             <h2 style={{marginBottom: '20px', marginTop: '25px'}}>Add Event</h2> 
-            <Form onSubmit={handleFormSubmit}>
+            <Form className={classes.formWrapper} onSubmit={handleFormSubmit}>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Event Title</Form.Label>
@@ -71,7 +76,7 @@ const AddVolunteerWork = () => {
                         <Form.Control type="text" placeholder="Enter Imgur Link" disabled/>
                     </Form.Group>
                 </Form.Row>
-                <Button variant="primary" type="submit">
+                <Button style={{marginLeft: '88%'}} variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import SingleUser from '../SingleUser/SingleUser';
+import classes from './allRegisteredUsers.module.css'
 
 const AllRegisteredUsers = () => {
     const [allRegisteredUsers, setAllRegisteredUsers] = useState([]);
@@ -15,8 +16,8 @@ const AllRegisteredUsers = () => {
     return (
         <div>
             <h2>Volunteer Register List</h2>
-            <Container className="list">
-                <Row>
+            <Container className={classes.card}>
+                <Row className={classes.headerRow}>
                     <Col md={2}>Name</Col>
                     <Col md={4}>Email ID</Col>
                     <Col md={2}>Registration Date</Col>

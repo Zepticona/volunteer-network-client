@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import volunteeringWorks from '../../FakeData/fakeData';
 import SingleWork from '../SingleWork/SingleWork';
 
 const AllWorks = () => {

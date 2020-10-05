@@ -25,7 +25,7 @@ const NavigationBar = (props) => {
                     {
                         props.showEmail && loggedInUser.email ? <Link to="/home" style={{marginLeft: '30px'}}>{loggedInUser.email}</Link> : <Link to="/login"><Button style={{marginLeft: '30px'}} variant="primary">Register</Button></Link>
                     }
-                    <Link><Button style={{marginLeft: '30px'}} variant="secondary">Admin</Button></Link>
+                    <Link to="/adminPanel/allRegisteredUsers"><Button style={{marginLeft: '30px'}} variant="secondary">Admin</Button></Link>
                 </Form>
             </Navbar.Collapse>
         </Navbar>

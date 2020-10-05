@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PrivateRoute2 from './components/PrivateRoute2/PrivateRoute2';
 import RegisteredWorks from './components/RegisteredWorks/RegisteredWorks';
 import Registration from './components/Registration/Registration';
 
@@ -28,12 +29,15 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/adminPanel">
+          {/* <Route path="/adminPanel">
             <AdminPanel></AdminPanel>
-          </Route>
+          </Route> */}
           <PrivateRoute path="/registration/:workId">
             <Registration></Registration>
           </PrivateRoute>
+          <PrivateRoute2 path="/adminPanel">
+            <AdminPanel></AdminPanel>
+          </PrivateRoute2>
           <Route exact path="/">
             <Home></Home>
           </Route>
