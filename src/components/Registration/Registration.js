@@ -10,7 +10,7 @@ const Registration = () => {
     let imgUrl;
 
     // Fetching the selected volunteering work using route parameter
-    fetch(`http://localhost:8080/allWorks/${id.workId}`)
+    fetch(`https://young-ocean-27000.herokuapp.com/allWorks/${id.workId}`)
     .then( res => res.json())
     .then( data => {
         document.getElementById('volunteerWork').value = data.name;
@@ -31,7 +31,7 @@ const Registration = () => {
         }
         
         // Posting/Sending user data to the database
-        fetch(`http://localhost:8080/addUsers`, {
+        fetch(`https://young-ocean-27000.herokuapp.com/addUsers`, {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(userInfo)

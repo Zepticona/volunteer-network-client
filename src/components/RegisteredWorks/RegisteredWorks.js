@@ -11,7 +11,7 @@ const RegisteredWorks = (props) => {
         let singleWorkDOM = e.target.parentNode.parentNode;
 
         // Calling the deleting API on the Selected User identified by the id sent from the button click event
-        fetch(`http://localhost:8080/deleteWork/${id}`, {
+        fetch(`https://young-ocean-27000.herokuapp.com/deleteWork/${id}`, {
             method: 'DELETE'
         })
         .then( res => res.json())

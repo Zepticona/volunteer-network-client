@@ -5,7 +5,7 @@ import SingleWork from '../SingleWork/SingleWork';
 const AllWorks = () => {
     const [works, setWorks] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:8080/allWorks')
+        fetch('https://young-ocean-27000.herokuapp.com/allWorks')
         .then( res => res.json())
         .then( data => {
             const allVolunteeringWorks = [...data]

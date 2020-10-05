@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 
 const SingleUser = (props) => {
     const rowStyle = {
-        border: '1px solid red',
+        fontWeight: 600,
         padding: '5px',
         marginTop: '10px',
         marginBottom: '10px'
@@ -15,7 +15,7 @@ const SingleUser = (props) => {
         let singleWorkDOM = e.target.parentNode.parentNode;
 
         // Calling the deleting API on the Selected User identified by the id sent from the button click event
-        fetch(`http://localhost:8080/deleteWork/${id}`, {
+        fetch(`https://young-ocean-27000.herokuapp.com/deleteWork/${id}`, {
             method: 'DELETE'
         })
         .then( res => res.json())

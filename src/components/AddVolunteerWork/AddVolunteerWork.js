@@ -11,7 +11,7 @@ const AddVolunteerWork = () => {
     const [allWorks, setAllWorks] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:8080/allWorks')
+        fetch('https://young-ocean-27000.herokuapp.com/allWorks')
         .then( res => res.json())
         .then( data => {
             const allData = [...data]
@@ -38,7 +38,7 @@ const AddVolunteerWork = () => {
             // setAllWorks(newData)
             // const updatedWorkSet = [...allWorks]
             // console.log(updatedWorkSet)
-            fetch('http://localhost:8080/addWork', {
+            fetch('https://young-ocean-27000.herokuapp.com/addWork', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify(newVolunteerWork)

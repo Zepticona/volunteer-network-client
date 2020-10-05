@@ -11,7 +11,7 @@ const AllRegisteredWorks = () => {
 
     // Loading data for the logged in user from the database
     useEffect( () => {
-        fetch('http://localhost:8080/registeredWorks?email=' + loggedInUser.email)
+        fetch('https://young-ocean-27000.herokuapp.com/registeredWorks?email=' + loggedInUser.email)
         .then( res => res.json())
         .then( data => setRegisteredWorks(data))
     }, [])

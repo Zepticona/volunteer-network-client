@@ -6,7 +6,7 @@ import classes from './allRegisteredUsers.module.css'
 const AllRegisteredUsers = () => {
     const [allRegisteredUsers, setAllRegisteredUsers] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:8080/allRegisteredUsers')
+        fetch('https://young-ocean-27000.herokuapp.com/allRegisteredUsers')
         .then( res => res.json())
         .then( data => {
             const registeredUsers = [...data];
