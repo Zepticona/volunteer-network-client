@@ -18,7 +18,7 @@ const NavigationBar = (props) => {
                 <Nav className="ml-auto">
                     <Link to="/home">Home</Link>
                     <Link style={{marginLeft: '30px'}} to="/home">Donation</Link>
-                    <Link to="/allRegisteredWorks" style={{marginLeft: '30px'}}>Events</Link>
+                    <Link to="/testingRoute" style={{marginLeft: '30px'}}>Events</Link>
                     <Link style={{marginLeft: '30px'}} to="/home">Blog</Link>
                 </Nav>
                 <Form inline>

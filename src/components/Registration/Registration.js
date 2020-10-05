@@ -50,7 +50,7 @@ const Registration = () => {
                 <input type="date" placeholder="Date" id="date" required/>
                 <input type="text" placeholder="Description" id="description" />
                 <input readOnly type="text" id="volunteerWork" />
-                <Link to="/allRegisteredWorks">
+                <Link to="/testingRoute">
                     <button onClick={registrationHandler}>Registration</button>
                 </Link>
             </div >

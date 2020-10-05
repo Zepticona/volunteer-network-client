@@ -21,7 +21,7 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/allRegisteredWorks">
+          <Route path="/testingRoute">
             <AllRegisteredWorks></AllRegisteredWorks>
           </Route>
           <Route path="/login">
